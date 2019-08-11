@@ -12,4 +12,4 @@ response = requests.get(req_url + university)
 html = response.content
 grad_soup = BeautifulSoup(html, "html.parser")
 
-print(grad_soup.find('td', attrs={'class':'tcol5'}))
+print(len(grad_soup.find_all('td', attrs={'class':'tcol5'})))
