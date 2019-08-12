@@ -1,5 +1,6 @@
 # scrapes data from thegradcafe.com
 import requests
+import json
 
 from bs4 import BeautifulSoup
 
@@ -12,4 +13,17 @@ response = requests.get(req_url + university)
 html = response.content
 grad_soup = BeautifulSoup(html, "html.parser")
 
-print(len(grad_soup.find_all('td', attrs={'class':'tcol5'})))
+grad_json = {}
+grad_json['posts'] = []
+
+for index in range(len(grad_soup.find_all('td', attrs={'class':'tcol5'}))):
+	grad_json['posts'].append(
+	{
+		'date': grad_soup.find_all('td', attrs={'class': 'tcol5'})[index].get_text()
+	}
+	)
+
+with open('gradcafe.json', 'w') as outfile:
+	json.dump(grad_json, outfile)
+
+print("done!")
