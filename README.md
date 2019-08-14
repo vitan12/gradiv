@@ -18,6 +18,24 @@ Through the use of a visual medium, we hope to be able to present information sc
 
 Being interested in Grad programs ourselves, we were presented with the challenge of trying to compare programs and our likely success rates with our applications. Though rankings and other such metrics exist, it was hard to find a single portal where we could access and compare information about Graduate programs that wasn’t otherwise locked behind a paywall or was spread out over an interface that was clunky and not user friendly. Being Engineers, and noticing this problem, we took it upon ourselves to come up with a solution that could not only help us, but can serve as a useful tool for all of our peers and those who come after us, as applying for higher education is a step and a decision that we would like to make armed with as much information as possible. 
 
+## Setting up (and running) the Flask server
+
+Set your working directory to gradiv-app. Then, run the following:
+
+```
+python3 -m venv gradiv-venv
+. gradiv-venv/bin/activate
+pip install flask
+```
+
+This creates a virtual environment, activates it, and installs Flask inside the virtual environment. Note that if you're not running on a Mac you might have a different command to run.
+
+Then, run
+```
+export FLASK_APP=gradiv-app.py
+flask run
+```
+
 ## Requirements
 
 To run the web scraping scripts, you'll need Python 2 and the following libraries:
