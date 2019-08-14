@@ -22,17 +22,17 @@ rank = soup.findAll('div', attrs={'class': 'ranklist-ranked-item RankList__Rank-
 uni = soup.findAll('a', attrs={'class': 'Anchor-u1fur6-0 chvEFD'})
 location = soup.findAll('p', attrs={'class': 'Paragraph-fqygwe-0 bstttc'})
 tuition = soup.findAll('p', attrs={'class': 'fqygwe-0-Paragraph-hHEPzZ gscYiA'})
-college_page = soup.findAll('a', attrs={'href': 'Anchor-u1fur6-0 chvEFD'})
+college_page = soup.findAll('a', attrs={'class': 'Anchor-u1fur6-0 eNYUZI'})
 
-print (rank)
+print (len(uni))
 
-for n in range (len(rank)):
+for n in range (len(uni)):
     rankings_list['rankings'].append({
-            #'University Name': uni[n].get_text(),
-            'Rank': rank[n].get_text(),
-            #'Location': location[n].get_text(),
+            'University Name': uni[n].get_text(),
+            'Rank': rank[n * 2].get_text(),
+            'Location': location[n].get_text(),
             'Tuition': tuition[n].get_text(),
-            #'USNews Website': college_page[n].get_text()
+            'USNews Website': college_page[n].get_text()
         })
 
 
