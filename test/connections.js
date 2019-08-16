@@ -7,6 +7,6 @@ mongoose.connection.once('open', function(){
     console.log('Connection Successful');
 
 }).on('error', function(error){
-    console.log('Connection Error', error);
+    console.log('Connection Error: Error logged', error);
 });
 
