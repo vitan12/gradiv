@@ -30,3 +30,29 @@ pip install [library_name]
 ```
 
 Coming soon will be a Dockerfile with all dependencies installed.
+
+## Requirements for MongoDB Integration
+
+Step 1: install MongoDB Community edition. I followed the steps here for version 4.2 using Homebrew on Mac (https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/).
+
+Step 2: after following the installation + running steps, enter
+```
+mongo
+```
+
+to enter the Mongo shell. To create the same database/collection/data I'm currently using in the setup, do the following in the Mongo shell:
+```
+use bestdb
+db.testCol.insert({"hello":"world"})
+```
+A database named bestdb with collection testCol should now have one entry.
+
+Step 3:
+In the virtual environment:
+```
+pip install Flask-PyMongo
+```
+Then boot up the server using flask run as you normally would. If this works, then on the "Hello World" page you will also see the following:
+```
+{'_id': ObjectId('5d55f92b702a9d1a0d00f55f'), 'hello': 'world'}
+```
