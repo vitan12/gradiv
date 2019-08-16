@@ -1,0 +1,23 @@
+{
+  "name": "gradiv",
+  "version": "1.0.0",
+  "description": "An open source API and interface that presents information about Graduate Programs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitan12/gradiv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitan12/gradiv/issues"
+  },
+  "homepage": "https://github.com/vitan12/gradiv#readme",
+  "dependencies": {
+    "mongoose": "^5.6.9"
+  }
+}
