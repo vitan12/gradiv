@@ -23,3 +23,14 @@ for x in range(1, 501):
     print('Created {0} of 500 as {1}'.format(x,result.inserted_id))
 
 print('finished creating 500 schools')
+
+#TODO
+#import from json
+#push to database
+#compile data from usnews and gradcafe into one json object per
+
+#create seperate file
+#create crud functions within python that can be imported and called by the flask app.
+    #totall # of applicants in the US vs total vs international
+    #filter by GPA/GRE/university/program/year applied using text inputs
+
