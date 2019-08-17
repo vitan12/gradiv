@@ -4,6 +4,7 @@
 
 *.DS_Store
 gradiv-venv
+
 ### Flask ###
 instance/*
 !instance/.gitignore
