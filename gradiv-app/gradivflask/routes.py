@@ -2,7 +2,7 @@ from flask import render_template, request
 from gradivflask import app
 from flask_pymongo import PyMongo
 from datetime import time
-from mongodb import sampleDB
+from mongodb import parsing
 
 mongo1 = PyMongo(app, uri="mongodb://localhost:27017/gradb")
 
@@ -10,7 +10,7 @@ mongo1 = PyMongo(app, uri="mongodb://localhost:27017/gradb")
 @app.route('/index')
 def index():
     mongo_test = mongo1.db.testCol.find_one({"hello": "world"})
-    db_test = mongo1.db.schools.find_one({"rating": 5})
+    db_test = mongo1.db.stats.find_one({})
     return render_template('index.html', test=db_test)
 
 @app.route("/chart_test")
