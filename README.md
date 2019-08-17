@@ -23,9 +23,7 @@ Being interested in Grad programs ourselves, we were presented with the challeng
 Set your working directory to gradiv-app. Then, run the following:
 
 ```
-python3 -m venv gradiv-venv
-. gradiv-venv/bin/activate
-pip install flask
+python3 -m venv gradiv-venv . gradiv-venv/bin/activate pip install flask
 ```
 
 This creates a virtual environment, activates it, and installs Flask inside the virtual environment. Note that if you're not running on a Mac you might have a different command to run.
