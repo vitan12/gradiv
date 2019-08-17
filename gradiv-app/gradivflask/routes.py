@@ -4,7 +4,7 @@ from flask_pymongo import PyMongo
 from datetime import time
 from mongodb import sampleDB
 
-mongo1 = PyMongo(app, uri="mongodb://localhost:27017/bestdb")
+mongo1 = PyMongo(app, uri="mongodb://localhost:27017/gradb")
 
 @app.route('/')
 @app.route('/index')

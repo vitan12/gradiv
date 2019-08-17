@@ -4,9 +4,12 @@ from flask_pymongo import PyMongo
 
 
 mongo1 = MongoClient(port=27017)
-db = mongo1.bestdb
+db = mongo1.gradb
 
 print ("Hello")
+#purges the db
+db.schools.drop()
+
 #testing read/write operations of the db
 names = ['Upenn','Princeton','Penn State', 'Harvard', 'Colombia','Vanderbilt','UIUC', 'Georgia Tech','Johns Hopkins']
 grad_school_type = ['Engineering','Medicine','MBA','Computer Science']
