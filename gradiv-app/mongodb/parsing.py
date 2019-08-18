@@ -22,10 +22,10 @@ for d in file_data["posts"]:
     reviews.insert(d)  
 #print(file_data)
 
-regex = re.compile('/accepted/', re.IGNORECASE)
+regex = re.compile('accepted', re.IGNORECASE)
 
 university = {
-        'name' : "Princeton university",
+        'name' : "Princeton University",
         'total_applications' : reviews.count(),
         'accepted' : reviews.find({'result': regex}).count(),
         'americans' : reviews.find({'applicant_type': 'A'}).count(),
