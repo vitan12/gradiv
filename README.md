@@ -31,15 +31,16 @@ pip install [library_name]
 
 Coming soon will be a Dockerfile with all dependencies installed.
 
+In addition, to run the site locally, you will need MongoDB, the instructions for installation and setup can be found in the below section.
+
 ## Requirements for MongoDB Integration
 
-Step 1: install MongoDB Community edition. I followed the steps here for version 4.2 using Homebrew on Mac (https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/).
+Step 1: Install MongoDB Community edition. I followed the steps here for version 4.2 using Homebrew on Mac (https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/). (Any version > 3.2 should work)
 
 Step 2: after following the installation + running steps, enter
 ```
 mongo
 ```
-
 to enter the Mongo shell. In the shell you can manually add and edit entries in the database. To test the database that this project will be working with, enter the following:
 ```
 use gradb
