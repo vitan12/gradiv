@@ -18,6 +18,12 @@ Through the use of a visual medium, we hope to be able to present information sc
 
 Being interested in Grad programs ourselves, we were presented with the challenge of trying to compare programs and our likely success rates with our applications. Though rankings and other such metrics exist, it was hard to find a single portal where we could access and compare information about Graduate programs that wasn’t otherwise locked behind a paywall or was spread out over an interface that was clunky and not user friendly. Being Engineers, and noticing this problem, we took it upon ourselves to come up with a solution that could not only help us, but can serve as a useful tool for all of our peers and those who come after us, as applying for higher education is a step and a decision that we would like to make armed with as much information as possible. 
 
+## Architecture
+
+![Flowchart](Untitled%20Diagram.png?raw=true "Architecture Flowchart")
+
+Shown above is a flowchart visualizing our pipeline of data as it flows from scraping through various processes before reaching the frontend.
+
 ## Setting up (and running) the Flask server
 
 Set your working directory to gradiv-app. Then, run the following:
